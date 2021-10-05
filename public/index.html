@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,8 +49,19 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <h1>main body</h1>
-        <p>Just some random text to make sure things are working properly!</p>
+        <section class="new-tweet">
+          <br>
+          <form method=POST action="/tweets/">
+            <div class="upper-tweet">
+              <!--<label for="tweet-text">What are you humming about?</label> -->
+              <textarea class="tweet-box" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            </div>
+            <div class="lower-tweet">
+              <button class="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
     </main>
   </body>
 </html>

@@ -1,0 +1,30 @@
+.upper-tweet {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  border-style: none none solid none;
+}
+
+.tweet-box {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  width: 100%;
+  color: #545149;
+  background-color: #f4f1ec;
+  border-style: none; 
+}
+
+.lower-tweet {
+  display:flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.counter {
+  font-family: "Bungee"
+}
+
+.tweet-button {
+  font-family: "Bungee";
+  background: #4056A1;
+  color: white;
+}
