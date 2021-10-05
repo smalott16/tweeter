@@ -1,0 +1,42 @@
+.navbar {
+  position: absolute;
+  z-index: 0;
+  height: 120px;
+  width: 100%;
+  background: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-head {
+  font-family: "Bungee";
+  padding-left: 1.5em;
+}
+
+.nav-secondary {
+  font-family: "Source Sans Pro";
+}
+
+.nav-general {
+  font-weight: 300;
+}
+
+.nav-bold {
+  font-weight: 600;
+}
+
+.nav-vertical {
+  padding-right: 1.5em;
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+i.fas.fa-angle-double-down {
+  color: red;
+}
+
