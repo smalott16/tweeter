@@ -53,15 +53,16 @@
           <br>
           <form method=POST action="/tweets/">
             <div class="upper-tweet">
-              <!--<label for="tweet-text">What are you humming about?</label> -->
-              <textarea class="tweet-box" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea class="tweet-box" name="text" id="tweet-text"></textarea>
             </div>
             <div class="lower-tweet">
               <button class="tweet-button" type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
+              <output id="counter" name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
         </section>
     </main>
+    <script src="./scripts/composer-char-counter.js"></script>
   </body>
 </html>
