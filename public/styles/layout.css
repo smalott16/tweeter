@@ -24,7 +24,6 @@ body {
   align-items: center;
 }
 
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -33,4 +32,14 @@ main {
   position: static;
   width: 90%;
   background-color: #f4f1ec;
+}
+
+article {
+  border-style: solid;
+  margin-bottom: 10px;
+}
+
+article:hover {
+  box-shadow: 5px 5px lightsteelblue;
+
 }
