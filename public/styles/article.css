@@ -19,6 +19,12 @@
   margin: 0 auto;
 }
 
+.article-tweet {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: 600;
+}
+
 .handle {
   font-weight: 600;
   color: darkgray;
@@ -27,7 +33,7 @@
 
 .icons {
   color: #4056A1;
-  font-size: 15px
+  font-size: 10px;
 }
 
 .fa-flag:hover {
