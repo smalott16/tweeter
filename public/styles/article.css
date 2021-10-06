@@ -1,0 +1,43 @@
+
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  font-size: small
+}
+
+.articlebody {
+  width: 95%;
+  border-style: none none solid none;
+  margin: 0 auto;
+}
+
+.handle {
+  font-weight: 600;
+  color: darkgray;
+  font-size: large;
+}
+
+.icons {
+  color: #4056A1;
+  font-size: 15px
+}
+
+.fa-flag:hover {
+  color: gold;
+}
+
+.fa-retweet:hover {
+  color: gold;
+}
+
+.fa-heart:hover {
+  color: gold;
+}
