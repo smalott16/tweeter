@@ -9,7 +9,7 @@ $(document).ready(function() {
     
     tweets.forEach((tweetElement) => {
       let $tweet = createTweetElement(tweetElement);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
 
     });
   };
@@ -49,8 +49,9 @@ $(document).ready(function() {
       method: "GET"
     })
     .then(function(tweets) {
-      renderTweets(tweets);
+      return $(renderTweets(tweets));
     })
+    
   };
   loadTweets();
   
@@ -58,19 +59,32 @@ $(document).ready(function() {
 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    let $output = $('#tweet-text').serialize();
 
+    //throw an error if certain conditions are not met
+    let $tweetText = $('#tweet-text').val();
+    if(!$tweetText) {
+      alert("Your tweet has no content! Please add some text and try again.")
+      return;
+    } else if ($tweetText.length > 140) {
+      alert("Your tweet exceeds 140 characters. Please reduce the length and try again.");
+      return;
+    }
+
+    let $output = $('#tweet-text').serialize();
     $.ajax({
         url: "/tweets/",
         method: "POST",
         data: $output
       })
       .then(function(data) {
-        console.log(data);
+        loadTweets();
+        $("#tweet-text").replaceWith($('<textarea class="tweet-box" name="text" id="tweet-text"></textarea>'))
+        $("#counter").replaceWith($('<output id="counter" name="counter" class="counter" for="tweet-text">140</output>'))
       })
       .catch(function(error) {
         console.log("error:", error);
       });
+
   });
 
 });
