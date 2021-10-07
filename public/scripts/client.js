@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function() {
     
   const renderTweets = function(tweets) {
@@ -61,33 +62,28 @@ $(document).ready(function() {
   };
   loadTweets();
   
-  //renderTweets(tweetData);
+  const activateError = function(id) {
+    if ( $(id).is( ":hidden" ) ) {
+      $(id).slideDown( "slow" );
+      return;
+    } else {
+      $(id).slideUp("slow");
+      $(id).slideDown( "slow" );
+      return;
+    }
+  };
 
   $('form').on('submit', function(event) {
     event.preventDefault();
 
     //throw an error if certain conditions are not met
     let $tweetText = $('#tweet-text').val();
-
-    //please for the love of gracious refactor this.
     if(!$tweetText) {
-      if ( $( "#too-short" ).is( ":hidden" ) ) {
-        $( "#too-short" ).slideDown( "slow" );
-        return;
-      } else {
-        $( "#too-short" ).slideUp("slow");
-        $( "#too-short" ).slideDown( "slow" );
-        return;
-      }   
+      activateError("#too-short");  
+      return;
     } else if ($tweetText.length > 140) {
-      if ( $( "#too-long" ).is( ":hidden" ) ) {
-        $( "#too-long" ).slideDown( "slow" );
-        return;
-      } else {
-        $( "too-long" ).slideUp("slow");
-        $( "too-long" ).slideDown( "slow" );
-        return;
-      }
+      activateError("#too-long");
+      return;
     } else if ($tweetText && $tweetText.length <= 140 && $( ".error" ).is( ":visible" )) {
       $( ".error" ).slideUp("slow");
     }
