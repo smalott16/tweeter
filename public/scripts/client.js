@@ -5,7 +5,8 @@
  */
 
 $(document).ready(function() {
-    
+  
+  //function that prepends the new tweet dom object
   const renderTweets = function(tweets) {
     
     tweets.forEach((tweetElement) => {
@@ -15,7 +16,8 @@ $(document).ready(function() {
     });
   };
 
-  const escape = function (str) {
+  //excape function to prevent malicious scipts in tweets
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -50,51 +52,55 @@ $(document).ready(function() {
     return $tweetElement;
   };
 
+  //function to reload all tweets via ajax request
   const loadTweets = function() {
     $.ajax({
       url:"/tweets/",
       method: "GET"
     })
-    .then(function(tweets) {
-      return $(renderTweets(tweets));
-    })
+      .then(function(tweets) {
+        return $(renderTweets(tweets));
+      });
     
   };
   loadTweets();
   
+  //function to handle a tweet with too few or too many characters
   const activateError = function(id) {
-    if ( $(id).is( ":hidden" ) ) {
-      $(id).slideDown( "slow" );
+    if ($(id).is(":hidden")) {
+      $(id).slideDown("slow");
       return;
     } else {
       $(id).slideUp("slow");
-      $(id).slideDown( "slow" );
+      $(id).slideDown("slow");
       return;
     }
   };
 
+  //code to execute when someone tries to post a tweet
   $('form').on('submit', function(event) {
     event.preventDefault();
 
     //throw an error if certain conditions are not met
     let $tweetText = $('#tweet-text').val();
-    if(!$tweetText) {
-      activateError("#too-short");  
+    if (!$tweetText) {
+      activateError("#too-short");
       return;
     } else if ($tweetText.length > 140) {
       activateError("#too-long");
       return;
-    } else if ($tweetText && $tweetText.length <= 140 && $( ".error" ).is( ":visible" )) {
-      $( ".error" ).slideUp("slow");
+    } else if ($tweetText && $tweetText.length <= 140 && $(".error").is(":visible")) {
+      $(".error").slideUp("slow");
     }
 
     let $output = $('#tweet-text').serialize();
     $.ajax({
-        url: "/tweets/",
-        method: "POST",
-        data: $output
-      })
-      .then(function(data) {
+      url: "/tweets/",
+      method: "POST",
+      data: $output
+    })
+      .then(function() {
+        //post the tweet and reset the character counter
         loadTweets();
         $("#tweet-text").val("");
         $("#counter").text("140");
