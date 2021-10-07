@@ -52,8 +52,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section id="too-short" class='error'>Error. Please enter some text.</section>
-        <section id="too-long" class='error'>Error. Please use less than 140 characters.</section>
+        <section id="too-short" class='error'>
+          <i class="fas fa-exclamation-triangle"></i>
+          Error. Please enter some text.
+          <i class="fas fa-exclamation-triangle"></i>
+        </section>
+        <section id="too-long" class='error'>
+          <i class="fas fa-exclamation-triangle"></i>
+          Error. Please use less than 140 characters.
+          <i class="fas fa-exclamation-triangle"></i>
+        </section>
         <section class="new-tweet">
           <br>
           <form method=POST action="/tweets/">
