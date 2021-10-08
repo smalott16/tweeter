@@ -11,6 +11,15 @@ Tweeter is a simple, single-page Twitter clone. The application uses a back-end 
 
 ## Screenshots
 
+<img alt="Desktop view on page load" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.48.34%20PM.png?raw=true"></img>
+
+<img alt="Desktop view on page load" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.49.38%20PM.png?raw=true"></img>
+
+<img alt="Desktop view after posting tweet" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.49.38%20PM.png?raw=true"></img>
+
+!["Desktop view after posting a tweet."](https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.51.09%20PM.png?raw=true)
+
+!["Desktop view after posting a tweet."](https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.52.28%20PM.png?raw=true)
 
 ## Getting Started
 
