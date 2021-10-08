@@ -5,6 +5,7 @@
   height: 520px;
   width: 100%;
   background-color: grey;
+  color: white;
   background-image: url("../images/asfalt-light.png");
   display: flex; 
   flex-direction: column;

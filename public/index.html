@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/article.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,53 +33,53 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navbar">
-      <span class="nav-head">tweeter</span>
+      <span class="nav-head" id="tweeter">tweeter</span>
       <span class="nav-vertical">
         <span class="nav-secondary">
           <span class="nav-bold">Write</span>
           <span class="nav-general">a new tweet</span>
         </span>
-        <i class="fas fa-angle-double-down"></i>
+        <i class="fas fa-angle-double-down" id="compose-button"></i>
       </span>
     </nav>
-    
-    <header class="header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-    </header>
+    <div class="user-info">
+      <header class="header">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+            <h2>Your Name</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-        <section id="too-short" class='error'>
-          <i class="fas fa-exclamation-triangle"></i>
-          Error. Please enter some text.
-          <i class="fas fa-exclamation-triangle"></i>
-        </section>
-        <section id="too-long" class='error'>
-          <i class="fas fa-exclamation-triangle"></i>
-          Error. Please use less than 140 characters.
-          <i class="fas fa-exclamation-triangle"></i>
-        </section>
-        <section class="new-tweet">
-          <br>
-          <form method=POST action="/tweets/">
-            <div class="upper-tweet">
-              <label for="tweet-text">What are you humming about?</label>
-              <textarea class="tweet-box" name="text" id="tweet-text"></textarea>
-            </div>
-            <div class="lower-tweet">
-              <button class="tweet-button" type="submit">Tweet</button>
-              <output id="counter" name="counter" class="counter" for="tweet-text">140</output>
-            </div>
-          </form>
-          <br>
-        </section>
-        <section id="tweets-container" class="container"></section>
-    </main>
-    
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+          <section id="too-short" class='error'>
+            <i class="fas fa-exclamation-triangle"></i>
+            Error. Please enter some text.
+            <i class="fas fa-exclamation-triangle"></i>
+          </section>
+          <section id="too-long" class='error'>
+            <i class="fas fa-exclamation-triangle"></i>
+            Error. Please use less than 140 characters.
+            <i class="fas fa-exclamation-triangle"></i>
+          </section>
+          <section class="new-tweet">
+            <br>
+            <form method=POST action="/tweets/">
+              <div class="upper-tweet">
+                <label for="tweet-text">What are you humming about?</label>
+                <textarea class="tweet-box" name="text" id="tweet-text"></textarea>
+              </div>
+              <div class="lower-tweet">
+                <button class="tweet-button" type="submit">Tweet</button>
+                <output id="counter" name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+            <br>
+          </section>
+          <section id="tweets-container" class="container"></section>
+      </main>
+    </div>
   </body>
 </html>

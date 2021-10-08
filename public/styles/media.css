@@ -1,0 +1,23 @@
+@media only screen and (min-width: 768px) {
+  .header {
+    width: 30%;
+    top: 120px;
+    padding-top: 30px;
+    margin: 30px;
+    margin-right: 120px;
+    height: 400px;
+  }
+  main {
+    width: 60%;
+    padding-top: 120px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .user-info {
+    display: flex
+  }
+
+  .navbar {
+    background: #4056A1;
+  }
+}
