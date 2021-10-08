@@ -15,11 +15,13 @@ Tweeter is a simple, single-page Twitter clone. The application uses a back-end 
 
 <img alt="Desktop view on page load" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.49.38%20PM.png?raw=true"></img>
 
-<img alt="Desktop view after posting tweet" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.49.38%20PM.png?raw=true"></img>
+<img alt="Desktop view after posting tweet" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.51.09%20PM.png?raw=true"></img>
 
-!["Desktop view after posting a tweet."](https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.51.09%20PM.png?raw=true)
+<img alt="Mobile view on page load" width="200" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.52.28%20PM.png?raw=true"></img>
 
-!["Desktop view after posting a tweet."](https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.52.28%20PM.png?raw=true)
+<img alt="Error Message - too fiew characters" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.53.08%20PM.png?raw=true"></img>
+
+<img alt="Error Message - too many characters" width="400" src="https://github.com/smalott16/tweeter/blob/master/docs/Screen%20Shot%202021-10-07%20at%204.55.46%20PM.png?raw=true"></img>
 
 ## Getting Started
 
