@@ -22,4 +22,18 @@ $(document).ready(function() {
     $("#counter").val(140 - tweetLength);
   });
 
+  $('.scroll-top').on("click", () => {
+    $(document.documentElement).scrollTop(0).toggleClass('');
+  });
+
+  $(window).scroll(() => {
+    if ($(document.documentElement).scrollTop() === 0) {
+      console.log("here");
+      $('.scroll-top').css("display", "none");
+    } else {
+      $('.scroll-top').css("display", "block");
+
+    }
+  })
+  
 });

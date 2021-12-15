@@ -39,11 +39,11 @@
 
 i.fas.fa-angle-double-down {
   color: red;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 i.fas.fa-angle-double-down:hover {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   animation-name: bounce-2;
   animation-timing-function: ease;
 }
