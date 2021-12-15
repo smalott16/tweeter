@@ -28,7 +28,6 @@ $(document).ready(function() {
 
   $(window).scroll(() => {
     if ($(document.documentElement).scrollTop() === 0) {
-      console.log("here");
       $('.scroll-top').css("display", "none");
     } else {
       $('.scroll-top').css("display", "block");
