@@ -22,11 +22,11 @@
   width: 100%;
   color: #545149;
   background-color: #f4f1ec;
-  border-style: none;
+  border-style: none; 
 }
 
 .lower-tweet {
-  display: flex;
+  display:flex;
   justify-content: space-between;
   padding-top: 10px;
 }
@@ -42,5 +42,5 @@
 }
 
 #tweets-container {
-  padding-top: 30px;
+  padding-top: 30px
 }

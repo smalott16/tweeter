@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,19 +13,21 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: "Source Sans Pro";
-  /* display: flex; */
-  /* flex-direction: column; 
-  /* align-items: center;*/
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: "Source Sans Pro";
+    /* display: flex; */
+    /* flex-direction: column; 
+    /* align-items: center;*/
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 main {
   position: static;
   width: 90%;
@@ -41,6 +42,7 @@ article {
 
 article:hover {
   box-shadow: 5px 5px lightsteelblue;
+
 }
 
 .scroll-top {
@@ -52,13 +54,13 @@ article:hover {
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 40px;
-  display: none;
+  display: none
 }
 
 #scroll-top-visible {
-  display: block;
+  display: block
 }
 
 i.fas.fa-angle-double-up {
-  color: white;
+  color: white
 }
